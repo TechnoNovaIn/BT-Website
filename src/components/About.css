@@ -1,0 +1,207 @@
+/* ==========================================================================
+   About
+   ========================================================================== */
+
+/* ---------- About: main container ---------- */
+
+.about-container {
+  width: 100%;
+  /* max-width: 1320px; */
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- About: centered section heading ---------- */
+
+.about-heading {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 46px;
+}
+
+.about-heading .eyebrow {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- About: layout ---------- */
+
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: stretch;
+  gap: 48px;
+}
+
+.about-image-column,
+.about-content-column {
+  min-width: 0;
+  display: flex;
+}
+
+/* ---------- About: media ---------- */
+
+.about-media {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  height: 650px;
+}
+
+.about-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* object-fit: cover; */
+  object-position: center;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 50px rgba(11, 18, 32, 0.14);
+}
+
+/* ---------- About: content ---------- */
+
+.about-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.about-copy .section-lede {
+  margin: 0 0 24px;
+}
+
+.about-copy .section-lede:last-of-type {
+  margin-bottom: 26px;
+}
+
+.about-subtitle {
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+}
+
+/* ---------- About: plate tag ---------- */
+
+.about-media .plate-tag {
+  position: absolute;
+  bottom: -20px;
+  left: 24px;
+  background: var(--white);
+  color: var(--ink);
+  padding: 16px 22px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-display);
+  box-shadow: 0 16px 34px rgba(11, 18, 32, 0.16);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.about-media .plate-tag .num {
+  font-size: 1.7rem;
+  color: var(--violet);
+  line-height: 1;
+  font-weight: 700;
+}
+
+.about-media .plate-tag .txt {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  max-width: 90px;
+  line-height: 1.3;
+}
+
+/* ---------- About: cargo list ---------- */
+
+.cargo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 22px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cargo-grid li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.92rem;
+  color: var(--text);
+}
+
+.cargo-grid li i {
+  flex-shrink: 0;
+  color: var(--pink);
+  font-size: 1rem;
+}
+
+/* ---------- About: responsive ---------- */
+
+@media (max-width: 991px) {
+  .about-container {
+    padding: 0 20px;
+  }
+
+  .about-heading {
+    margin-bottom: 32px;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-media {
+    height: auto;
+  }
+
+  .about-media img {
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: contain;
+    /* object-fit: cover; */
+  }
+
+  .cargo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- About: mobile ---------- */
+
+@media (max-width: 576px) {
+  .about-container {
+    padding: 0 16px;
+  }
+
+  .about-layout {
+    gap: 26px;
+  }
+
+  .about-media img {
+    max-height: 320px;
+  }
+
+  .about-copy .section-lede {
+    margin-bottom: 20px;
+  }
+
+  .about-subtitle {
+    font-size: 1rem;
+  }
+
+  .cargo-grid {
+    gap: 10px;
+  }
+
+  .cargo-grid li {
+    font-size: 0.9rem;
+  }
+}
